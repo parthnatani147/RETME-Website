@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETME | Premium Bath Architecture</title>
+    <meta name="description" content="Engineering the Essential. Premium bathroom accessories and architectural drain solutions by RETME.">
+    
+    <!-- Google Fonts: Oswald for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-light': '#F7F7F7',
+                        'brand-dark': '#1C1C1C',
+                        'brand-muted': '#8A8A8A',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Animations -->
+    <style>
+        body {
+            background-color: #F7F7F7;
+            color: #1C1C1C;
+        }
+        
+        /* Cinematic Fade-In on Scroll */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle Image Zoom on Hover */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom {
+            transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-zoom-container:hover .img-zoom {
+            transform: scale(1.05);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F7F7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D1D1D1;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-dark selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 mix-blend-difference text-white px-6 py-8 md:px-12 flex justify-between items-center transition-all duration-500" id="navbar">
+        <a href="#" class="font-display text-2xl tracking-[0.3em] uppercase font-light">RETME</a>
+        <div class="hidden md:flex space-x-12 text-xs tracking-[0.2em] uppercase font-light">
+            <a href="#ethos" class="hover:opacity-60 transition-opacity">Ethos</a>
+            <a href="#collections" class="hover:opacity-60 transition-opacity">Collections</a>
+            <a href="#engineering" class="hover:opacity-60 transition-opacity">Engineering</a>
+            <a href="#contact" class="hover:opacity-60 transition-opacity">Contact</a>
+        </div>
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden flex flex-col space-y-1.5 cursor-pointer opacity-80">
+            <span class="w-6 h-[1px] bg-white block"></span>
+            <span class="w-6 h-[1px] bg-white block"></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <!-- Background Image (Using 1234.png as a striking lifestyle hero) -->
+        <div class="absolute inset-0 w-full h-full">
+            <img src="1234.png" alt="RETME Architectural Drain" class="w-full h-full object-cover object-center opacity-90">
+            <div class="absolute inset-0 bg-brand-light/30 mix-blend-overlay"></div>
+        </div>
+        
+        <!-- Hero Text -->
+        <div class="relative z-10 text-center px-6 mt-32">
+            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight text-brand-dark font-light fade-in-up">
+                Engineering the Essential.
+            </h1>
+            <p class="mt-6 text-brand-dark font-sans font-light tracking-widest uppercase text-xs md:text-sm fade-in-up" style="transition-delay: 200ms;">
+                Minimalist architecture for the modern bath.
+            </p>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center fade-in-up" style="transition-delay: 400ms;">
+            <div class="w-[1px] h-16 bg-brand-dark opacity-30"></div>
+            <span class="mt-4 text-[10px] tracking-[0.2em] uppercase text-brand-dark font-light">Scroll</span>
+        </div>
+    </header>
+
+    <!-- The Ethos Section -->
+    <section id="ethos" class="py-32 md:py-48 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-32">
+        <div class="w-full md:w-5/12 fade-in-up">
+            <h2 class="font-display text-4xl md:text-6xl text-brand-dark font-light leading-tight">
+                Form meets flow.
+            </h2>
+            <p class="mt-8 text-brand-muted font-light leading-relaxed text-sm md:text-base">
+                We believe bathroom spaces are sanctuaries. Every interaction, from the grip of a health faucet to the silent disappearance of water through a stainless steel channel, should feel deliberate. 
+                <br><br>
+                RETME strips away the unnecessary, leaving only pure function and refined geometry designed to seamlessly blend with your architectural tiles and stone.
+            </p>
+        </div>
+        <div class="w-full md:w-7/12 img-zoom-container fade-in-up" style="transition-delay: 200ms;">
+            <img src="sdfgh.png" alt="RETME Linear Drain" class="w-full h-auto object-cover img-zoom shadow-sm">
+        </div>
+    </section>
+
+    <!-- The Collections Section -->
+    <section id="collections" class="py-24 bg-white px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20 fade-in-up">
+                <h3 class="font-display text-3xl md:text-5xl text-brand-dark font-light">The Collections</h3>
+                <div class="w-12 h-[1px] bg-brand-dark mt-6"></div>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                
+                <!-- Tile Insert Drain -->
+                <div class="group cursor-pointer fade-in-up">
+                    <div class="img-zoom-container aspect-square bg-brand-light">
+                        <img src="1.jpg" alt="Tile Insert Drain" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <h4 class="font-sans tracking-widest text-sm uppercase">Tile Insert Drains</h4>
+                        <span class="text-brand-muted text-xs transition-transform group-hover:translate-x-2">→</span>
+                    </div>
+                </div>
+
+                <!-- SS Manhole Covers -->
+                <div class="group cursor-pointer fade-in-up" style="transition-delay: 150ms;">
+                    <div class="img-zoom-container aspect-square bg-brand-light">
+                        <img src="ChatGPT Image Sep 18, 2026, 03_21_44 PM.png" alt="SS304 Manhole Cover" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <h4 class="font-sans tracking-widest text-sm uppercase">SS304 Manhole Covers</h4>
+                        <span class="text-brand-muted text-xs transition-transform group-hover:translate-x-2">→</span>
+                    </div>
+                </div>
+
+                <!-- Linear Drains -->
+                <div class="group cursor-pointer fade-in-up">
+                    <div class="img-zoom-container aspect-[4/3] bg-brand-light">
+                        <img src="sdfgh.png" alt="Linear Shower Drains" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <h4 class="font-sans tracking-widest text-sm uppercase">Linear Shower Drains</h4>
+                        <span class="text-brand-muted text-xs transition-transform group-hover:translate-x-2">→</span>
+                    </div>
+                </div>
+
+                <!-- Premium Accessories -->
+                <div class="group cursor-pointer fade-in-up" style="transition-delay: 150ms;">
+                    <div class="img-zoom-container aspect-[4/3] bg-brand-light flex items-center justify-center">
+                        <!-- Reusing 1234.png as lifestyle context for accessories/hardware -->
+                        <img src="1234.png" alt="Premium Bath Accessories" class="w-full h-full object-cover img-zoom">
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <h4 class="font-sans tracking-widest text-sm uppercase">Bath Accessories</h4>
+                        <span class="text-brand-muted text-xs transition-transform group-hover:translate-x-2">→</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Materiality / Engineering Section -->
+    <section id="engineering" class="py-32 md:py-48 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16 md:gap-32">
+        <div class="w-full md:w-5/12 fade-in-up">
+            <h2 class="font-display text-4xl md:text-6xl text-brand-dark font-light leading-tight">
+                Uncompromising Precision.
+            </h2>
+            <p class="mt-8 text-brand-muted font-light leading-relaxed text-sm md:text-base">
+                Machined for longevity. Designed for the tactile experience. 
+                <br><br>
+                Constructed from premium SS304 Stainless Steel, our drain channels and manhole covers resist rust, corrosion, and time. The tile-insert technology allows your flooring to remain visually uninterrupted, achieving a flawless, seamless finish in high-end architectural spaces.
+            </p>
+        </div>
+        <div class="w-full md:w-7/12 img-zoom-container fade-in-up" style="transition-delay: 200ms;">
+            <img src="5.jpg" alt="Exploded view of RETME engineering" class="w-full h-auto object-cover img-zoom shadow-sm">
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-brand-dark text-white py-24 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            
+            <div class="fade-in-up">
+                <h2 class="font-display text-3xl md:text-5xl font-light mb-12">Let's discuss your space.</h2>
+                <form class="space-y-8 max-w-md">
+                    <div>
+                        <input type="text" placeholder="Name" class="w-full bg-transparent border-b border-gray-700 py-3 text-sm font-light focus:outline-none focus:border-white transition-colors placeholder-gray-500">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email Address" class="w-full bg-transparent border-b border-gray-700 py-3 text-sm font-light focus:outline-none focus:border-white transition-colors placeholder-gray-500">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Project Details / Inquiry" class="w-full bg-transparent border-b border-gray-700 py-3 text-sm font-light focus:outline-none focus:border-white transition-colors placeholder-gray-500">
+                    </div>
+                    <button type="submit" class="text-xs tracking-[0.2em] uppercase font-light mt-8 hover:text-gray-400 transition-colors">
+                        Send Inquiry →
+                    </button>
+                </form>
+            </div>
+
+            <div class="flex flex-col justify-end md:items-end text-sm text-gray-500 font-light fade-in-up" style="transition-delay: 200ms;">
+                <p class="mb-2 text-white font-display tracking-widest text-lg uppercase">RETME</p>
+                <p class="mb-8">A premium brand by Khandelwal Bath Studio.</p>
+                
+                <div class="flex space-x-6 text-xs tracking-widest uppercase mt-auto">
+                    <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                    <a href="#" class="hover:text-white transition-colors">Legal</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Intersection Observer Script for Fade-in Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach((elem) => {
+                observer.observe(elem);
+            });
+        });
+    </script>
+</body>
+</html>
